@@ -1,0 +1,147 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+# title: Frozen's Blog
+title: Frozen's Notes
+subtitle: 技术/思考/生活/分享
+description: 与人方便，随遇而安
+author: Frozen
+language: zh-Hans
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://rusyue.com
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render: README.md
+
+# Writing
+new_post_name: :year/:month/:title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 6
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+# theme: landscape
+# theme: next
+theme: next-reloaded
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repository:
+    # coding限制绑定域名 博客不再push到coding仓库了
+    coding: https://rusyue:606742tt@git.coding.net/rusyue/rusyue.git
+    github: https://rusyue:606742tt@github.com/rusyue/rusyue.github.com.git
+  branch: master
+
+# Local Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# symbols_count_time
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+
+# hexo-tag-cloud
+tag_cloud:
+  textFont: Lato, Trebuchet MS, Helvetica
+  textColour: rgba(0,0,0,0.85)
+  outlineColour: rgba(0,0,0,0.25)
+  # textHeight: 25
+
+# live2d
+live2d:
+  enable: true
+  scriptFrom: local
+  model:
+    use: live2d-widget-model-hijiki # wanko
+    scale: 1
+    hHeadPos: 0.5
+    vHeadPos: 0.618
+  display:
+    position: left
+    width: 90
+    height: 240
+    superSample: 2
+    hOffset: 0
+    vOffset: -145
+  mobile:
+    show: false
+    scale: 0.5
+  react:
+    opacityDefault: 1
+    opacityOnHover: 1
+
+
+
+# qiniu sync
+# plugins:
+  # - hexo-qiniu-sync
+
+# qiniu:
+#   offline: false
+#   sync: false
+#   bucket: rusyue
+#   access_key: JYALoqvJoK4Pr1taJo29K7Ihqka1GKsRBJVyIeVp
+#   secret_key: l0ztNyjEXA0v-hMuiyD4WnCt-kBnxeDinAW_0etr
+#   dirPrefix:
+#   urlPrefix: http://onppng27y.bkt.clouddn.com
+#   local_dir: cdn
+#   update_exist: true
+#   image:
+#     folder: images
+#     extend:
+#   js:
+#     folder: js
+#   css:
+#     folder: css
